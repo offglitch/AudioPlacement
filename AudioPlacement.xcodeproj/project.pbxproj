@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5FA30122D3309000E4BCDD /* whatsapp_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FB22D3309000E4BCDD /* whatsapp_black.png */; };
+		1C5FA30222D3309000E4BCDD /* weather_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FC22D3309000E4BCDD /* weather_black.png */; };
+		1C5FA30322D3309000E4BCDD /* weather_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FD22D3309000E4BCDD /* weather_grey.png */; };
+		1C5FA30422D3309000E4BCDD /* whatsapp_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FE22D3309000E4BCDD /* whatsapp_grey.png */; };
+		1C5FA30522D3309000E4BCDD /* speaker_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FF22D3309000E4BCDD /* speaker_grey.png */; };
+		1C5FA30622D3309000E4BCDD /* speaker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA30022D3309000E4BCDD /* speaker_black.png */; };
+		1C5FA30922D3397200E4BCDD /* ARBinauralAudioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5FA30822D3397200E4BCDD /* ARBinauralAudioSource.swift */; };
+		1C5FA30B22D340FD00E4BCDD /* majorlazermono.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA30A22D340FD00E4BCDD /* majorlazermono.mp3 */; };
 		1CC3FD4D22D309E9004E4199 /* ML_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD4C22D309E9004E4199 /* ML_icon.png */; };
 		1CC3FD5022D309F4004E4199 /* audio_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD4E22D309F4004E4199 /* audio_icon.png */; };
 		1CC3FD5122D309F4004E4199 /* AR_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD4F22D309F4004E4199 /* AR_icon.png */; };
@@ -26,6 +34,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C5FA2FB22D3309000E4BCDD /* whatsapp_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp_black.png; sourceTree = "<group>"; };
+		1C5FA2FC22D3309000E4BCDD /* weather_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_black.png; sourceTree = "<group>"; };
+		1C5FA2FD22D3309000E4BCDD /* weather_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_grey.png; sourceTree = "<group>"; };
+		1C5FA2FE22D3309000E4BCDD /* whatsapp_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp_grey.png; sourceTree = "<group>"; };
+		1C5FA2FF22D3309000E4BCDD /* speaker_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_grey.png; sourceTree = "<group>"; };
+		1C5FA30022D3309000E4BCDD /* speaker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_black.png; sourceTree = "<group>"; };
+		1C5FA30822D3397200E4BCDD /* ARBinauralAudioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBinauralAudioSource.swift; sourceTree = "<group>"; };
+		1C5FA30A22D340FD00E4BCDD /* majorlazermono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = majorlazermono.mp3; sourceTree = "<group>"; };
 		1CC3FD4C22D309E9004E4199 /* ML_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ML_icon.png; sourceTree = "<group>"; };
 		1CC3FD4E22D309F4004E4199 /* audio_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_icon.png; sourceTree = "<group>"; };
 		1CC3FD4F22D309F4004E4199 /* AR_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AR_icon.png; sourceTree = "<group>"; };
@@ -71,6 +87,12 @@
 		1CC3FD4922D309C9004E4199 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				1C5FA30022D3309000E4BCDD /* speaker_black.png */,
+				1C5FA2FF22D3309000E4BCDD /* speaker_grey.png */,
+				1C5FA2FC22D3309000E4BCDD /* weather_black.png */,
+				1C5FA2FD22D3309000E4BCDD /* weather_grey.png */,
+				1C5FA2FB22D3309000E4BCDD /* whatsapp_black.png */,
+				1C5FA2FE22D3309000E4BCDD /* whatsapp_grey.png */,
 				1CC3FD5222D30A09004E4199 /* crosshair_icon.png */,
 				1CC3FD4F22D309F4004E4199 /* AR_icon.png */,
 				1CC3FD4E22D309F4004E4199 /* audio_icon.png */,
@@ -82,6 +104,7 @@
 		1CC3FD5422D30A33004E4199 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				1C5FA30A22D340FD00E4BCDD /* majorlazermono.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -92,6 +115,7 @@
 				1CC3FD5622D30AB9004E4199 /* ARAudioNode.swift */,
 				1CC3FD5822D30B2A004E4199 /* ARAcousticBarrier.swift */,
 				1CC3FD5A22D30C7B004E4199 /* ARAudioSource.swift */,
+				1C5FA30822D3397200E4BCDD /* ARBinauralAudioSource.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -205,12 +229,19 @@
 			files = (
 				1CDA1A2F22CC992B00B10134 /* art.scnassets in Resources */,
 				1CDA1A3922CC992C00B10134 /* LaunchScreen.storyboard in Resources */,
+				1C5FA30422D3309000E4BCDD /* whatsapp_grey.png in Resources */,
 				1CC3FD5122D309F4004E4199 /* AR_icon.png in Resources */,
 				1CC3FD5322D30A09004E4199 /* crosshair_icon.png in Resources */,
+				1C5FA30622D3309000E4BCDD /* speaker_black.png in Resources */,
+				1C5FA30322D3309000E4BCDD /* weather_grey.png in Resources */,
+				1C5FA30222D3309000E4BCDD /* weather_black.png in Resources */,
+				1C5FA30B22D340FD00E4BCDD /* majorlazermono.mp3 in Resources */,
+				1C5FA30122D3309000E4BCDD /* whatsapp_black.png in Resources */,
 				1CDA1A3622CC992C00B10134 /* Assets.xcassets in Resources */,
 				1CC3FD4D22D309E9004E4199 /* ML_icon.png in Resources */,
 				1CDA1A3422CC992B00B10134 /* Main.storyboard in Resources */,
 				1CC3FD5022D309F4004E4199 /* audio_icon.png in Resources */,
+				1C5FA30522D3309000E4BCDD /* speaker_grey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5FA30922D3397200E4BCDD /* ARBinauralAudioSource.swift in Sources */,
 				1CDA1A3122CC992B00B10134 /* ViewController.swift in Sources */,
 				1CC3FD6222D30D90004E4199 /* MovingAverage.swift in Sources */,
 				1CC3FD5E22D30CF4004E4199 /* ARSessionState.swift in Sources */,
