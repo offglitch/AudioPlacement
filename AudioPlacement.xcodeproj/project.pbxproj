@@ -37,9 +37,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CC3FD4822D30833004E4199 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		1CDA1A2022CC992B00B10134 = {
 			isa = PBXGroup;
 			children = (
+				1CC3FD4822D30833004E4199 /* Media */,
 				1CDA1A2B22CC992B00B10134 /* AudioPlacement */,
 				1CDA1A2A22CC992B00B10134 /* Products */,
 			);
