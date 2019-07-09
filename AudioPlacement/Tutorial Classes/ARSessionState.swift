@@ -14,9 +14,9 @@ enum ARSessionState: String, CustomStringConvertible {
     var description: String {
         switch self {
         case .initialised:
-            return "Move iPhone around so the camera can detect the ground"
+            return "Move iPhone around"
         case .ready:
-            return "Flat plane detected. You can now select and place objects."
+            return "Flat plane detected. Select and place objects."
         case .temporarilyUnavailable:
             return "Temporaily Unavailable"
         case .failed:

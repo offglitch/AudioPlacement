@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C045EB422D352960010D9EC /* ViewControllerAudioFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C045EB322D352960010D9EC /* ViewControllerAudioFuncs.swift */; };
 		1C5FA30122D3309000E4BCDD /* whatsapp_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FB22D3309000E4BCDD /* whatsapp_black.png */; };
 		1C5FA30222D3309000E4BCDD /* weather_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FC22D3309000E4BCDD /* weather_black.png */; };
 		1C5FA30322D3309000E4BCDD /* weather_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA2FD22D3309000E4BCDD /* weather_grey.png */; };
@@ -21,10 +22,10 @@
 		1CC3FD5322D30A09004E4199 /* crosshair_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD5222D30A09004E4199 /* crosshair_icon.png */; };
 		1CC3FD5722D30AB9004E4199 /* ARAudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3FD5622D30AB9004E4199 /* ARAudioNode.swift */; };
 		1CC3FD5922D30B2A004E4199 /* ARAcousticBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3FD5822D30B2A004E4199 /* ARAcousticBarrier.swift */; };
-		1CC3FD5B22D30C7B004E4199 /* ARAudioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3FD5A22D30C7B004E4199 /* ARAudioSource.swift */; };
 		1CC3FD5E22D30CF4004E4199 /* ARSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3FD5D22D30CF4004E4199 /* ARSessionState.swift */; };
 		1CC3FD6022D30D70004E4199 /* VirtualPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3FD5F22D30D70004E4199 /* VirtualPlane.swift */; };
 		1CC3FD6222D30D90004E4199 /* MovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3FD6122D30D90004E4199 /* MovingAverage.swift */; };
+		1CC9FFB722D458B800A59ED7 /* ViewControllerARDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC9FFB622D458B800A59ED7 /* ViewControllerARDelegates.swift */; };
 		1CDA1A2D22CC992B00B10134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA1A2C22CC992B00B10134 /* AppDelegate.swift */; };
 		1CDA1A2F22CC992B00B10134 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CDA1A2E22CC992B00B10134 /* art.scnassets */; };
 		1CDA1A3122CC992B00B10134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA1A3022CC992B00B10134 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C045EB322D352960010D9EC /* ViewControllerAudioFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAudioFuncs.swift; sourceTree = "<group>"; };
 		1C5FA2FB22D3309000E4BCDD /* whatsapp_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp_black.png; sourceTree = "<group>"; };
 		1C5FA2FC22D3309000E4BCDD /* weather_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_black.png; sourceTree = "<group>"; };
 		1C5FA2FD22D3309000E4BCDD /* weather_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_grey.png; sourceTree = "<group>"; };
@@ -48,10 +50,10 @@
 		1CC3FD5222D30A09004E4199 /* crosshair_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshair_icon.png; sourceTree = "<group>"; };
 		1CC3FD5622D30AB9004E4199 /* ARAudioNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAudioNode.swift; sourceTree = "<group>"; };
 		1CC3FD5822D30B2A004E4199 /* ARAcousticBarrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAcousticBarrier.swift; sourceTree = "<group>"; };
-		1CC3FD5A22D30C7B004E4199 /* ARAudioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAudioSource.swift; sourceTree = "<group>"; };
 		1CC3FD5D22D30CF4004E4199 /* ARSessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionState.swift; sourceTree = "<group>"; };
 		1CC3FD5F22D30D70004E4199 /* VirtualPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPlane.swift; sourceTree = "<group>"; };
 		1CC3FD6122D30D90004E4199 /* MovingAverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingAverage.swift; sourceTree = "<group>"; };
+		1CC9FFB622D458B800A59ED7 /* ViewControllerARDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerARDelegates.swift; sourceTree = "<group>"; };
 		1CDA1A2922CC992B00B10134 /* AudioPlacement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlacement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CDA1A2C22CC992B00B10134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CDA1A2E22CC992B00B10134 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 			children = (
 				1CC3FD5622D30AB9004E4199 /* ARAudioNode.swift */,
 				1CC3FD5822D30B2A004E4199 /* ARAcousticBarrier.swift */,
-				1CC3FD5A22D30C7B004E4199 /* ARAudioSource.swift */,
 				1C5FA30822D3397200E4BCDD /* ARBinauralAudioSource.swift */,
 			);
 			path = "Custom Classes";
@@ -135,6 +136,8 @@
 			children = (
 				1CDA1A2C22CC992B00B10134 /* AppDelegate.swift */,
 				1CDA1A3022CC992B00B10134 /* ViewController.swift */,
+				1C045EB322D352960010D9EC /* ViewControllerAudioFuncs.swift */,
+				1CC9FFB622D458B800A59ED7 /* ViewControllerARDelegates.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -158,10 +161,10 @@
 		1CDA1A2B22CC992B00B10134 /* AudioPlacement */ = {
 			isa = PBXGroup;
 			children = (
-				1CC3FD6322D30E33004E4199 /* View Controller */,
 				1CC3FD4822D30833004E4199 /* Media */,
 				1CC3FD5522D30A7E004E4199 /* Custom Classes */,
 				1CC3FD5C22D30CC0004E4199 /* Tutorial Classes */,
+				1CC3FD6322D30E33004E4199 /* View Controller */,
 				1CDA1A3222CC992B00B10134 /* Main.storyboard */,
 				1CDA1A3722CC992C00B10134 /* LaunchScreen.storyboard */,
 				1CDA1A3A22CC992C00B10134 /* Info.plist */,
@@ -256,11 +259,12 @@
 				1CDA1A3122CC992B00B10134 /* ViewController.swift in Sources */,
 				1CC3FD6222D30D90004E4199 /* MovingAverage.swift in Sources */,
 				1CC3FD5E22D30CF4004E4199 /* ARSessionState.swift in Sources */,
+				1CC9FFB722D458B800A59ED7 /* ViewControllerARDelegates.swift in Sources */,
 				1CC3FD5722D30AB9004E4199 /* ARAudioNode.swift in Sources */,
-				1CC3FD5B22D30C7B004E4199 /* ARAudioSource.swift in Sources */,
 				1CC3FD6022D30D70004E4199 /* VirtualPlane.swift in Sources */,
 				1CDA1A2D22CC992B00B10134 /* AppDelegate.swift in Sources */,
 				1CC3FD5922D30B2A004E4199 /* ARAcousticBarrier.swift in Sources */,
+				1C045EB422D352960010D9EC /* ViewControllerAudioFuncs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -390,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

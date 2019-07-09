@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var objectSelectionView: UIView!
@@ -19,6 +19,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var objectSpawnPointCrosshairs: UIButton!
     
     @IBOutlet weak var userInstructionLabel: UILabel!
+    @IBOutlet weak var ARBigLabel: UILabel!
     
    // @IBOutlet weak var messageImage: UIImageView!
     //@IBOutlet weak var weatherImage: UIImageView!
@@ -49,8 +50,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var binauralNodes = [ARAudioNode]()
     
+    let deviceInputDummy = AVAudioMixerNode()
+
+    let barrierNode = ARAcousticBarrier(atPosition: SCNVector3(-0.5, 0, 0))
+
+    
+    
     
     //
+    var planes = [UUID: VirtualPlane]() {
+        didSet {
+            if planes.count > 0 {
+                self.sessionStatus = .ready
+            } else {
+                if self.sessionStatus == .ready { self.sessionStatus = .initialised }
+            }
+        }
+    }
+//
+    var sessionStatus = ARSessionState.initialised {
+        didSet {
+            DispatchQueue.main.async { self.userInstructionLabel.text = self.sessionStatus.description }
+            if sessionStatus == .failed { cleanupARSession() }
+            if sessionStatus == .temporarilyUnavailable {
+                DispatchQueue.main.async { self.ARBigLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) } }
+            if sessionStatus == .ready {
+                DispatchQueue.main.async { self.ARBigLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) } }
+        }
+    }
+    
+    
     
     
     var objectImageViews = [UIImageView]()
@@ -127,14 +156,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         // use world tracking configuration (6DOF)
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal // I always forget this!
+        configuration.planeDetection = .horizontal
         
         self.sceneView.delegate = self
         // start AR processing session
         self.sceneView.session.run(configuration)
         
         // resume sessionStatus
-        if self.planes.count > 0 { self.sessionStatus = .ready }
+        // if self.planes.count > 0 { self.sessionStatus = .ready }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -142,7 +171,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // pause session if view is going to go
         self.sceneView.session.pause()
         
-        self.sessionStatus = .temporarilyUnavailable
+        //self.sessionStatus = .temporarilyUnavailable
     }
     
     @IBAction func panAction(_ sender: UIPanGestureRecognizer) {
@@ -180,8 +209,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     
-    @IBAction func imageButtonPressed(_ sender: Any) {
+    @IBAction func imageButtonPressed(_ sender: UIButton) {
+        let selectedImageView = self.objectImageViews[sender.tag]
+        let selectedNode = self.binauralNodes[sender.tag]
+        let blackImageVersion = self.blackObjectImages[sender.tag]
+        let greyImageVersion = self.greyObjectImages[sender.tag]
+        
+        if selectedNode.audioIsPlaying {
+            selectedNode.audioIsPlaying = false // also hides object
+            
+            selectedImageView.image = blackImageVersion
+            
+        } else {
+            let hitTestResults = self.sceneView.hitTest(self.objectSpawnPoint, types: .existingPlane)
+            guard hitTestResults.count > 0, let pointOnPlane = hitTestResults.first else { return }
+            
+            let newObjectPosition = SCNVector3(pointOnPlane.worldTransform.columns.3.x,
+                                               pointOnPlane.worldTransform.columns.3.y,
+                                               pointOnPlane.worldTransform.columns.3.z)
+            
+            selectedNode.position = newObjectPosition
+            selectedNode.audioIsPlaying = true // also makes object visible
+            
+            selectedImageView.image = greyImageVersion
+        }
+        
     }
+    
+    
     
 }
     
