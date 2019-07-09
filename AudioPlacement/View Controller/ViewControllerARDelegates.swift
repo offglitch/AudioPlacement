@@ -9,7 +9,7 @@
 
 import ARKit
 
-extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
+extension ViewController {
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         

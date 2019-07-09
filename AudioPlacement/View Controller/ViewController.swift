@@ -10,9 +10,10 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var ARInfoView: UIView!
     @IBOutlet weak var objectSelectionView: UIView!
     
     @IBOutlet weak var objectSelectionButton: UIButton!
@@ -171,7 +172,7 @@ class ViewController: UIViewController {
         // pause session if view is going to go
         self.sceneView.session.pause()
         
-        //self.sessionStatus = .temporarilyUnavailable
+        self.sessionStatus = .temporarilyUnavailable
     }
     
     @IBAction func panAction(_ sender: UIPanGestureRecognizer) {
@@ -185,7 +186,9 @@ class ViewController: UIViewController {
         selectedNode.position = self.sceneView.unprojectPoint(SCNVector3(Float(touchPoint.x),
                                                                          Float(touchPoint.y),
                                                                          zConstant))
+        
     }
+    
     
     @IBAction func objectSelectionButtonPressed(_ sender: UIButton) {
         
@@ -208,8 +211,8 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func imageButtonPressed(_ sender: UIButton) {
+        
         let selectedImageView = self.objectImageViews[sender.tag]
         let selectedNode = self.binauralNodes[sender.tag]
         let blackImageVersion = self.blackObjectImages[sender.tag]
@@ -232,12 +235,8 @@ class ViewController: UIViewController {
             selectedNode.audioIsPlaying = true // also makes object visible
             
             selectedImageView.image = greyImageVersion
+            }
         }
-        
-    }
-    
-    
-    
 }
     
     
