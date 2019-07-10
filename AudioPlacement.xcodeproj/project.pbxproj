@@ -16,6 +16,10 @@
 		1C5FA30622D3309000E4BCDD /* speaker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA30022D3309000E4BCDD /* speaker_black.png */; };
 		1C5FA30922D3397200E4BCDD /* ARBinauralAudioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5FA30822D3397200E4BCDD /* ARBinauralAudioSource.swift */; };
 		1C5FA30B22D340FD00E4BCDD /* majorlazermono.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FA30A22D340FD00E4BCDD /* majorlazermono.mp3 */; };
+		1C797E0622D5BA7F0061330D /* ARSCNView+HitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C797E0522D5BA7F0061330D /* ARSCNView+HitTests.swift */; };
+		1C797E0822D5BBA80061330D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C797E0722D5BBA80061330D /* Utilities.swift */; };
+		1C7F497E22D5D9210067C136 /* ViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F497D22D5D9210067C136 /* ViewController+CollectionView.swift */; };
+		1C7F498022D5DCF00067C136 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F497F22D5DCF00067C136 /* IconCollectionViewCell.swift */; };
 		1CC3FD4D22D309E9004E4199 /* ML_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD4C22D309E9004E4199 /* ML_icon.png */; };
 		1CC3FD5022D309F4004E4199 /* audio_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD4E22D309F4004E4199 /* audio_icon.png */; };
 		1CC3FD5122D309F4004E4199 /* AR_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC3FD4F22D309F4004E4199 /* AR_icon.png */; };
@@ -44,6 +48,10 @@
 		1C5FA30022D3309000E4BCDD /* speaker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_black.png; sourceTree = "<group>"; };
 		1C5FA30822D3397200E4BCDD /* ARBinauralAudioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBinauralAudioSource.swift; sourceTree = "<group>"; };
 		1C5FA30A22D340FD00E4BCDD /* majorlazermono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = majorlazermono.mp3; sourceTree = "<group>"; };
+		1C797E0522D5BA7F0061330D /* ARSCNView+HitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+HitTests.swift"; sourceTree = "<group>"; };
+		1C797E0722D5BBA80061330D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1C7F497D22D5D9210067C136 /* ViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		1C7F497F22D5DCF00067C136 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		1CC3FD4C22D309E9004E4199 /* ML_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ML_icon.png; sourceTree = "<group>"; };
 		1CC3FD4E22D309F4004E4199 /* audio_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_icon.png; sourceTree = "<group>"; };
 		1CC3FD4F22D309F4004E4199 /* AR_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AR_icon.png; sourceTree = "<group>"; };
@@ -138,6 +146,10 @@
 				1CDA1A3022CC992B00B10134 /* ViewController.swift */,
 				1C045EB322D352960010D9EC /* ViewControllerAudioFuncs.swift */,
 				1CC9FFB622D458B800A59ED7 /* ViewControllerARDelegates.swift */,
+				1C797E0522D5BA7F0061330D /* ARSCNView+HitTests.swift */,
+				1C797E0722D5BBA80061330D /* Utilities.swift */,
+				1C7F497D22D5D9210067C136 /* ViewController+CollectionView.swift */,
+				1C7F497F22D5DCF00067C136 /* IconCollectionViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -259,7 +271,11 @@
 				1CDA1A3122CC992B00B10134 /* ViewController.swift in Sources */,
 				1CC3FD6222D30D90004E4199 /* MovingAverage.swift in Sources */,
 				1CC3FD5E22D30CF4004E4199 /* ARSessionState.swift in Sources */,
+				1C797E0622D5BA7F0061330D /* ARSCNView+HitTests.swift in Sources */,
+				1C7F498022D5DCF00067C136 /* IconCollectionViewCell.swift in Sources */,
 				1CC9FFB722D458B800A59ED7 /* ViewControllerARDelegates.swift in Sources */,
+				1C797E0822D5BBA80061330D /* Utilities.swift in Sources */,
+				1C7F497E22D5D9210067C136 /* ViewController+CollectionView.swift in Sources */,
 				1CC3FD5722D30AB9004E4199 /* ARAudioNode.swift in Sources */,
 				1CC3FD6022D30D70004E4199 /* VirtualPlane.swift in Sources */,
 				1CDA1A2D22CC992B00B10134 /* AppDelegate.swift in Sources */,
