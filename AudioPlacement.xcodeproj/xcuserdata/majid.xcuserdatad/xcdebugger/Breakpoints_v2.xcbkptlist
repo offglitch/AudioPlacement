@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "39E94629-837E-49EF-8D7F-8442D96D179C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7219AE90-3843-47FD-9C51-39301CD49C61"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioPlacement/View Controller/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7219AE90-3843-47FD-9C51-39301CD49C61 - 1f57f2a30a14a28f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioPlacement.AppDelegate.__allocating_init() -&gt; AudioPlacement.AppDelegate"
+                  moduleName = "AudioPlacement"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View%20Controller/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "7219AE90-3843-47FD-9C51-39301CD49C61 - 8c4b20c9a9bc6c7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioPlacement.AppDelegate.init() -&gt; AudioPlacement.AppDelegate"
+                  moduleName = "AudioPlacement"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View%20Controller/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "7219AE90-3843-47FD-9C51-39301CD49C61 - 88de7a3cd7084014"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioPlacement.AppDelegate.__deallocating_deinit"
+                  moduleName = "AudioPlacement"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View%20Controller/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "7219AE90-3843-47FD-9C51-39301CD49C61 - 1c3153fbc823cbf9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "AudioPlacement"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View%20Controller/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5A683EB-4DB2-462F-9033-E8DB25508162"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioPlacement/View Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

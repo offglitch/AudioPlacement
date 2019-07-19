@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,15 +46,20 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="61" height="67"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🎵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-UQ-Q6Q">
-                                                                <rect key="frame" x="10" y="13" width="41" height="40"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-UQ-Q6Q">
+                                                                <rect key="frame" x="10" y="13" width="41" height="41"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstItem="jpz-UQ-Q6Q" firstAttribute="top" secondItem="fwR-RU-2Ib" secondAttribute="topMargin" constant="5" id="Dek-fY-ibL"/>
+                                                        <constraint firstItem="jpz-UQ-Q6Q" firstAttribute="centerY" secondItem="fwR-RU-2Ib" secondAttribute="centerY" id="Kaz-EP-Jtr"/>
+                                                        <constraint firstItem="jpz-UQ-Q6Q" firstAttribute="centerX" secondItem="fwR-RU-2Ib" secondAttribute="centerX" id="bd0-Dz-cM8"/>
+                                                        <constraint firstItem="jpz-UQ-Q6Q" firstAttribute="leading" secondItem="fwR-RU-2Ib" secondAttribute="leadingMargin" constant="2" id="r5T-yR-rGs"/>
+                                                    </constraints>
                                                     <connections>
                                                         <outlet property="iconLabel" destination="jpz-UQ-Q6Q" id="y5P-CF-dh9"/>
                                                     </connections>
@@ -89,12 +92,20 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVV-y8-ajP">
+                                <rect key="frame" x="155" y="374" width="65" height="64"/>
+                                <state key="normal" image="crosshair_icon.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cVV-y8-ajP" firstAttribute="centerX" secondItem="2Dk-lm-aFq" secondAttribute="centerX" id="0Qv-xZ-RzM"/>
                             <constraint firstAttribute="bottom" secondItem="2Dk-lm-aFq" secondAttribute="bottom" id="2eZ-zh-lCf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="U0K-SW-4ec" secondAttribute="leading" id="A0d-KI-NmD"/>
+                            <constraint firstItem="cVV-y8-ajP" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="155" id="F8l-9m-YLJ"/>
+                            <constraint firstItem="cVV-y8-ajP" firstAttribute="centerY" secondItem="BrB-h1-WRS" secondAttribute="centerY" id="HIg-0a-n9l"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="LSr-Hp-uQG"/>
+                            <constraint firstItem="cVV-y8-ajP" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="330" id="Lgc-lc-EXk"/>
                             <constraint firstItem="2Dk-lm-aFq" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Thg-j7-Yuo"/>
                             <constraint firstAttribute="trailing" secondItem="BrB-h1-WRS" secondAttribute="trailing" id="VMl-2V-aTV"/>
                             <constraint firstItem="2Dk-lm-aFq" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="bbc-Ao-CSl"/>
@@ -104,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="TI2-rc-5fa" id="ASn-cO-XfN"/>
+                        <outlet property="crosshairButton" destination="cVV-y8-ajP" id="ro8-Pd-O9w"/>
                         <outlet property="drawer" destination="2Dk-lm-aFq" id="Tm5-LB-hDn"/>
                         <outlet property="hitButton" destination="yfh-sO-na6" id="eXW-OE-TAB"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="lpn-yT-d5o"/>
@@ -114,4 +126,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="130.04926108374386"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="crosshair_icon.png" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>

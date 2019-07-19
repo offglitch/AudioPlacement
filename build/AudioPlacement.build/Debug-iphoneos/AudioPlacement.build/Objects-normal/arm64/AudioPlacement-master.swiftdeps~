@@ -1,0 +1,18 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.43.3 clang-1100.0.26.3)"
+options: "9823348f18ad3f114b65b0c43b235121"
+build_time: [1562821076, 448554000]
+inputs:
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/Custom Classes/ARBinauralAudioSource.swift": [1562736967, 633528812]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/ViewController.swift": [1562821076, 249027032]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/Tutorial Classes/MovingAverage.swift": [1562736967, 587077081]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/Tutorial Classes/ARSessionState.swift": [1562736967, 619750507]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/ARSCNView+HitTests.swift": [1562820028, 30815352]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/IconCollectionViewCell.swift": [1562753689, 349599828]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/ViewControllerARDelegates.swift": [1562736967, 560563490]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/Utilities.swift": [1562739781, 118854433]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/ViewController+CollectionView.swift": [1562753689, 355742716]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/Custom Classes/ARAudioNode.swift": [1562820028, 38554673]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/Tutorial Classes/VirtualPlane.swift": [1562736967, 612344381]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/AppDelegate.swift": [1562656725, 589709387]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/Custom Classes/ARAcousticBarrier.swift": [1562663078, 297518544]
+  "/Users/Cosmo/Desktop/kalkul/AudioPlacement/AudioPlacement/View Controller/ViewControllerAudioFuncs.swift": [1562736967, 574387877]

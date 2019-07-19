@@ -17,6 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var hitButton: UIButton!
     @IBOutlet weak var drawer: UIVisualEffectView!
+    @IBOutlet weak var crosshairButton: UIButton!
     
     let icons = ["🎵", "🌦", "✉️"]
     var selectedIcon = "🎵"
@@ -31,8 +32,69 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     
     /// The center of the screen, used for determining the location of the preview and (placed) object nodes
-    var screenCenter: CGPoint!
+    var center: CGPoint!
     
+    var positions = [SCNVector3]()
+    
+    // i dont need this because crosshairButton will always be in the middle of the screen anyways
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        let hitTest = sceneView.hitTest(center, types: .featurePoint)
+        let result = hitTest.last
+        guard let transform = result?.worldTransform else {return}
+        let thirdColumn = transform.columns.3
+        let position = SCNVector3Make(thirdColumn.x, thirdColumn.y, thirdColumn.z)
+        positions.append(position)
+        let lastTenPositions = positions.suffix(10)
+        SCNBox.position = getAveragePosition(from: lastTenPositions)
+    }
+    
+    // This is helping function to get the average in SCNVector3 values
+    func getAveragePosition(from positions : ArraySlice<SCNVector3>) -> SCNVector3 { // we're returning this because we want the average in SCNVector3
+        var averageX : Float = 0
+        var averageY : Float = 0
+        var averageZ : Float = 0
+        
+        for position in positions {
+            averageX += position.x
+            averageY += position.y
+            averageZ += position.z
+        }
+        let count = Float(positions.count)
+        return SCNVector3Make(averageX / count , averageY / count, averageZ / count)
+    }
+    
+    
+    var isFirstPoint = true
+    var points = [SCNNode]() // var to save all the points in nodes
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        
+        let sphereGeometry = SCNSphere(radius: 0.005)
+        let sphereNode = SCNNode(geometry: sphereGeometry)
+        sphereNode.position = arrow.position //this should make sure there  object as to keep it in position
+        sceneView.scene.rootNode.addChildNode(sphereNode)
+        // when we add a child node to the sphere, we'll add it to points array
+        points.append(sphereNode)
+        
+        if isFirstPoint {
+            isFirstPoint = false
+        } else {
+            //calculate the distance
+            let pointA = points[points.count - 2]
+            guard let pointB = points.last else {return}
+            
+            let d = distance(float3(pointA.position), float3(pointB.position)) // casting to float3 from SCNVector3
+            
+            // add line
+            let line = SCNGeometry.line(from: pointA.position, to: pointB.position)
+            print(d.description)
+            let lineNode = SCNNode(geometry: line)
+            sceneView.scene.rootNode.addChildNode(lineNode)
+            
+            isFirstPoint = true
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +104,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         collectionView.delegate = self
         collectionView.dataSource = self
         sceneView.delegate = self
-        objectNode = SCNNode()
+        //objectNode = SCNNode()
         
-        //setUpAudio()
-        
-       // setUpCamera()
+        setUpAudio()
+
+//        setUpCamera()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,11 +117,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         UIApplication.shared.isIdleTimerDisabled = true
         
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        //configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
         
         // Calculate `screenCenter` based on the current device orientation.
-        screenCenter = CGPoint( x: view.bounds.midX, y: view.bounds.midY )
+        center = CGPoint( x: view.bounds.midX, y: view.bounds.midY )
     }
     
     var isDrawerOpen = true
@@ -92,7 +154,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         
         // stop the audio
-        objectNode.removeAllAudioPlayers()
+        //objectNode.removeAllAudioPlayers()
         
         sceneView.session.pause()
         
@@ -101,7 +163,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         // Update `screenCenter` since the orientation of the device changed.
-        screenCenter = CGPoint(x: size.width / 2, y: size.height / 2)
+        center = CGPoint(x: size.width / 2, y: size.height / 2)
     }
     
     
@@ -119,7 +181,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration, options: [])
         
         // play a positional environment sound layer from the newly placed object
-        // playSound()
+        playSound()
         
     }
     
@@ -129,7 +191,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // as an environmental sound layer the audio will play indefinitely
         audioSource.loops = true
-        
+        audioSource.isPositional = true
+        audioSource.shouldStream = false
+
         // decode the audio from disk ahead of time
         audioSource.load()
     }
